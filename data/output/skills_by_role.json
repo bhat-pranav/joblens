@@ -1,0 +1,330 @@
+{
+  "Data/ML": [
+    {
+      "skill": "Communication",
+      "count": 123
+    },
+    {
+      "skill": "SQL",
+      "count": 105
+    },
+    {
+      "skill": "Python",
+      "count": 99
+    },
+    {
+      "skill": "Problem Solving",
+      "count": 66
+    },
+    {
+      "skill": "Data Analysis",
+      "count": 60
+    },
+    {
+      "skill": "Machine Learning",
+      "count": 47
+    },
+    {
+      "skill": "Data Visualization",
+      "count": 42
+    },
+    {
+      "skill": "Collaboration",
+      "count": 41
+    },
+    {
+      "skill": "AWS",
+      "count": 36
+    },
+    {
+      "skill": "Tableau",
+      "count": 32
+    },
+    {
+      "skill": "Project Management",
+      "count": 30
+    },
+    {
+      "skill": "Data Modeling",
+      "count": 25
+    },
+    {
+      "skill": "R",
+      "count": 25
+    },
+    {
+      "skill": "ETL",
+      "count": 24
+    },
+    {
+      "skill": "Analytical skills",
+      "count": 24
+    },
+    {
+      "skill": "Data Engineering",
+      "count": 20
+    },
+    {
+      "skill": "Agile",
+      "count": 18
+    },
+    {
+      "skill": "Statistical Analysis",
+      "count": 16
+    },
+    {
+      "skill": "C++",
+      "count": 16
+    },
+    {
+      "skill": "Azure",
+      "count": 15
+    }
+  ],
+  "Product/Program Mgmt": [
+    {
+      "skill": "Communication",
+      "count": 136
+    },
+    {
+      "skill": "Project Management",
+      "count": 74
+    },
+    {
+      "skill": "Problem Solving",
+      "count": 59
+    },
+    {
+      "skill": "Product Management",
+      "count": 54
+    },
+    {
+      "skill": "Collaboration",
+      "count": 52
+    },
+    {
+      "skill": "Stakeholder Management",
+      "count": 47
+    },
+    {
+      "skill": "Agile",
+      "count": 42
+    },
+    {
+      "skill": "Data Analysis",
+      "count": 42
+    },
+    {
+      "skill": "Program Management",
+      "count": 32
+    },
+    {
+      "skill": "Leadership",
+      "count": 29
+    },
+    {
+      "skill": "Analytical skills",
+      "count": 28
+    },
+    {
+      "skill": "Risk Management",
+      "count": 22
+    },
+    {
+      "skill": "Scrum",
+      "count": 17
+    },
+    {
+      "skill": "Jira",
+      "count": 16
+    },
+    {
+      "skill": "Organizational Skills",
+      "count": 15
+    },
+    {
+      "skill": "PMP",
+      "count": 15
+    },
+    {
+      "skill": "Team Leadership",
+      "count": 14
+    },
+    {
+      "skill": "Presentation Skills",
+      "count": 14
+    },
+    {
+      "skill": "Interpersonal skills",
+      "count": 13
+    },
+    {
+      "skill": "SQL",
+      "count": 13
+    }
+  ],
+  "SWE": [
+    {
+      "skill": "Communication",
+      "count": 272
+    },
+    {
+      "skill": "Problem Solving",
+      "count": 201
+    },
+    {
+      "skill": "C++",
+      "count": 146
+    },
+    {
+      "skill": "SQL",
+      "count": 140
+    },
+    {
+      "skill": "JavaScript",
+      "count": 135
+    },
+    {
+      "skill": "Python",
+      "count": 127
+    },
+    {
+      "skill": "Java",
+      "count": 121
+    },
+    {
+      "skill": "Agile",
+      "count": 111
+    },
+    {
+      "skill": "Collaboration",
+      "count": 103
+    },
+    {
+      "skill": "AWS",
+      "count": 87
+    },
+    {
+      "skill": "Git",
+      "count": 69
+    },
+    {
+      "skill": "Docker",
+      "count": 63
+    },
+    {
+      "skill": "HTML",
+      "count": 62
+    },
+    {
+      "skill": "Kubernetes",
+      "count": 56
+    },
+    {
+      "skill": ".NET",
+      "count": 51
+    },
+    {
+      "skill": "React",
+      "count": 50
+    },
+    {
+      "skill": "CI/CD",
+      "count": 50
+    },
+    {
+      "skill": "TypeScript",
+      "count": 48
+    },
+    {
+      "skill": "Analytical skills",
+      "count": 47
+    },
+    {
+      "skill": "Microservices",
+      "count": 45
+    }
+  ],
+  "Technical Ops/Solutions": [
+    {
+      "skill": "Communication",
+      "count": 155
+    },
+    {
+      "skill": "Problem Solving",
+      "count": 74
+    },
+    {
+      "skill": "Python",
+      "count": 62
+    },
+    {
+      "skill": "Project Management",
+      "count": 51
+    },
+    {
+      "skill": "Troubleshooting",
+      "count": 35
+    },
+    {
+      "skill": "Linux",
+      "count": 34
+    },
+    {
+      "skill": "Agile",
+      "count": 34
+    },
+    {
+      "skill": "AWS",
+      "count": 33
+    },
+    {
+      "skill": "Collaboration",
+      "count": 33
+    },
+    {
+      "skill": "Kubernetes",
+      "count": 32
+    },
+    {
+      "skill": "CI/CD",
+      "count": 31
+    },
+    {
+      "skill": "Docker",
+      "count": 29
+    },
+    {
+      "skill": "Azure",
+      "count": 29
+    },
+    {
+      "skill": "PowerShell",
+      "count": 29
+    },
+    {
+      "skill": "Analytical skills",
+      "count": 27
+    },
+    {
+      "skill": "Documentation",
+      "count": 25
+    },
+    {
+      "skill": "Networking",
+      "count": 21
+    },
+    {
+      "skill": "Leadership",
+      "count": 21
+    },
+    {
+      "skill": "Terraform",
+      "count": 20
+    },
+    {
+      "skill": "Network Security",
+      "count": 20
+    }
+  ]
+}

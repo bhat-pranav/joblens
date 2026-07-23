@@ -1,0 +1,82 @@
+[
+  {
+    "skill": "Communication",
+    "count": 686
+  },
+  {
+    "skill": "Problem Solving",
+    "count": 400
+  },
+  {
+    "skill": "Python",
+    "count": 291
+  },
+  {
+    "skill": "SQL",
+    "count": 274
+  },
+  {
+    "skill": "Collaboration",
+    "count": 229
+  },
+  {
+    "skill": "Agile",
+    "count": 205
+  },
+  {
+    "skill": "Project Management",
+    "count": 194
+  },
+  {
+    "skill": "C++",
+    "count": 182
+  },
+  {
+    "skill": "AWS",
+    "count": 163
+  },
+  {
+    "skill": "JavaScript",
+    "count": 162
+  },
+  {
+    "skill": "Java",
+    "count": 146
+  },
+  {
+    "skill": "Analytical skills",
+    "count": 126
+  },
+  {
+    "skill": "Data Analysis",
+    "count": 121
+  },
+  {
+    "skill": "Docker",
+    "count": 102
+  },
+  {
+    "skill": "Kubernetes",
+    "count": 98
+  },
+  {
+    "skill": "Git",
+    "count": 96
+  },
+  {
+    "skill": "Azure",
+    "count": 91
+  },
+  {
+    "skill": "CI/CD",
+    "count": 91
+  },
+  {
+    "skill": "Leadership",
+    "count": 81
+  },
+  {
+    "skill": "Machine Learning",
+    "count": 77
+  }
+]
