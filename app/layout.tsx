@@ -20,9 +20,22 @@ const mono = IBM_Plex_Mono({
   weight: ["400", "500", "600"],
 });
 
+const DESCRIPTION =
+  "What the job market is actually asking for, extracted from 1,000 real job postings.";
+
 export const metadata: Metadata = {
   title: "JobLens",
-  description: "What the job market is actually asking for, extracted from real postings.",
+  description: DESCRIPTION,
+  openGraph: {
+    title: "JobLens",
+    description: DESCRIPTION,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "JobLens",
+    description: DESCRIPTION,
+  },
 };
 
 export default function RootLayout({
