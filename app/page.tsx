@@ -1,64 +1,116 @@
-import Image from "next/image";
+import TopSkills from "./components/TopSkills";
+import SkillsByRole from "./components/SkillsByRole";
+import TopCompanies from "./components/TopCompanies";
+import ViewfinderTicks from "./components/ViewfinderTicks";
+import topSkills from "@/data/output/top_skills.json";
+import skillsByRole from "@/data/output/skills_by_role.json";
+import topCompanies from "@/data/output/top_companies.json";
+
+const METHODOLOGY = [
+  "1,000 POSTINGS SAMPLED",
+  "119 AGENCY POSTINGS FILTERED",
+  "SKILLS EXTRACTED VIA GPT-4o-mini",
+  "4 ROLE CATEGORIES",
+];
+
+function SectionHeading({
+  eyebrow,
+  title,
+  subtitle,
+}: {
+  eyebrow: string;
+  title: string;
+  subtitle: string;
+}) {
+  return (
+    <div className="mb-6">
+      <p
+        className="font-mono text-xs uppercase tracking-wider"
+        style={{ color: "var(--signal)" }}
+      >
+        {eyebrow}
+      </p>
+      <h2
+        className="mt-1 font-display text-3xl"
+        style={{ color: "var(--ink)" }}
+      >
+        {title}
+      </h2>
+      <p className="mt-1.5 text-sm" style={{ color: "var(--fog)" }}>
+        {subtitle}
+      </p>
+    </div>
+  );
+}
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="relative flex flex-1 justify-center px-5 py-16 sm:px-10">
+      <ViewfinderTicks />
+      <main className="relative z-10 flex w-full max-w-2xl flex-col gap-16">
+        <header>
+          <h1
+            className="font-display text-5xl tracking-tight sm:text-6xl"
+            style={{ color: "var(--ink)" }}
+          >
+            JobLens
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="mt-3 max-w-md text-sm" style={{ color: "var(--fog)" }}>
+            What the job market is actually asking for, focused out of real
+            postings.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          <p
+            className="mt-6 flex flex-wrap gap-x-2 gap-y-1 font-mono text-[11px] uppercase tracking-wider"
+            style={{ color: "var(--fog)" }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+            {METHODOLOGY.map((stat, i) => (
+              <span key={stat} className="flex items-center gap-2">
+                {i > 0 && (
+                  <span style={{ color: "var(--signal)" }} aria-hidden>
+                    ·
+                  </span>
+                )}
+                {stat}
+              </span>
+            ))}
+          </p>
+        </header>
+
+        <section>
+          <SectionHeading
+            eyebrow="01 — Signal Strength"
+            title="Top Skills"
+            subtitle="The 20 most requested skills across all postings, sized by frequency."
+          />
+          <TopSkills items={topSkills} />
+        </section>
+
+        <section>
+          <SectionHeading
+            eyebrow="02 — Filter By Role"
+            title="Skills by Role"
+            subtitle="Top skills within each role category — switch the filter to change the lens."
+          />
+          <SkillsByRole data={skillsByRole} />
+        </section>
+
+        <section>
+          <SectionHeading
+            eyebrow="03 — Employer Log"
+            title="Top Hiring Companies"
+            subtitle="Ranked by posting count. Recruiting and staffing agencies excluded — this reflects the employers doing the hiring."
+          />
+          <TopCompanies items={topCompanies} />
+        </section>
+
+        <footer
+          className="pt-4 font-mono text-[11px]"
+          style={{ borderTop: "1px solid var(--hairline)", color: "var(--fog)" }}
+        >
+          Source: 1,000-posting sample drawn from a 124k-row LinkedIn job
+          postings dataset. Skill and role extraction performed per-posting by
+          GPT-4o-mini; skill names normalized to merge duplicate phrasing.
+        </footer>
       </main>
     </div>
   );

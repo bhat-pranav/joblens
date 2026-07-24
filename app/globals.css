@@ -1,26 +1,52 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* core surfaces + ink */
+  --void: #10130f;
+  --surface: #191d17;
+  --surface-raised: #1f241d;
+  --ink: #eef0e9;
+  --fog: #7c8579;
+  --hairline: #2a2f27;
+
+  /* the one chrome/data accent — rangefinder amber */
+  --signal: #e8873f;
+  --signal-dim: #e8873f33;
+
+  /* role "filter" accents — scoped to Skills by Role only */
+  --role-swe: #4f8fdb;
+  --role-dataml: #5fae72;
+  --role-pm: #c97fc9;
+  --role-ops: #c96a4a;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--void);
+  --color-foreground: var(--ink);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  color-scheme: dark;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--void);
+  color: var(--ink);
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
 }

@@ -41,6 +41,53 @@ ROLE_MAP = {
     "Technical Ops/Solutions": "Technical Ops/Solutions",
 }
 
+# Staffing/recruiting agencies excluded from aggregation - these post on behalf
+# of undisclosed end employers, so their skill/company stats don't reflect
+# real hiring companies.
+STAFFING_AGENCIES = {
+    "Apex Systems",
+    "TEKsystems",
+    "Insight Global",
+    "Motion Recruitment",
+    "Collabera",
+    "Russell Tobin",
+    "Compunnel Inc.",
+    "Compunnel",
+    "Akkodis",
+    "Open Systems Technologies",
+    "Talent Groups",
+    "Dice",
+    "ClearanceJobs",
+    "Robert Half",
+    "Robert Half Technology",
+    "Randstad",
+    "Randstad Digital",
+    "Kforce",
+    "Modis",
+    "Judge Group",
+    "The Judge Group",
+    "CyberCoders",
+    "Beacon Hill Staffing",
+    "Aerotek",
+    "Cognizant Technology Solutions",
+    "Genesis10",
+    "Yoh",
+    "Signature Consultants",
+    "System One",
+    "Belcan",
+    "Artech Information Systems",
+    "Tata Consultancy Services",
+    "TCS",
+    "Experis",
+    "Aditi Consulting",
+    "Ascendion",
+    "Diverse Lynx",
+    "Actalent",
+    "Matlen Silver",
+    "UST",
+}
+STAFFING_AGENCIES_LOWER = {name.lower() for name in STAFFING_AGENCIES}
+
 SYSTEM_PROMPT = """You extract structured skill data from job postings.
 
 Given a job title and description, return a JSON object with this exact shape:
@@ -155,9 +202,14 @@ def aggregate(results):
     company_counter = Counter()
     display_names = {}  # normalized key -> display label
 
+    excluded_count = 0
+
     for entry in results:
         role = entry["role"]
         company = entry["company"]
+        if company.strip().lower() in STAFFING_AGENCIES_LOWER:
+            excluded_count += 1
+            continue
         for s in entry["skills"]:
             name = s.get("name", "").strip()
             if not name:
@@ -194,6 +246,7 @@ def aggregate(results):
     with open(OUTPUT_DIR / "top_companies.json", "w", encoding="utf-8") as f:
         json.dump(top_companies, f, indent=2)
 
+    print(f"Excluded {excluded_count} staffing-agency postings out of {len(results)} total.")
     print(f"Wrote output to {OUTPUT_DIR}")
 
 

@@ -1,82 +1,82 @@
 [
   {
     "skill": "Communication",
-    "count": 686
+    "count": 614
   },
   {
     "skill": "Problem Solving",
-    "count": 400
+    "count": 361
   },
   {
     "skill": "Python",
-    "count": 291
+    "count": 256
   },
   {
     "skill": "SQL",
-    "count": 274
+    "count": 236
   },
   {
     "skill": "Collaboration",
-    "count": 229
-  },
-  {
-    "skill": "Agile",
     "count": 205
   },
   {
+    "skill": "Agile",
+    "count": 184
+  },
+  {
     "skill": "Project Management",
-    "count": 194
+    "count": 169
   },
   {
     "skill": "C++",
-    "count": 182
-  },
-  {
-    "skill": "AWS",
-    "count": 163
+    "count": 168
   },
   {
     "skill": "JavaScript",
-    "count": 162
-  },
-  {
-    "skill": "Java",
     "count": 146
   },
   {
-    "skill": "Analytical skills",
-    "count": 126
+    "skill": "AWS",
+    "count": 145
+  },
+  {
+    "skill": "Java",
+    "count": 130
+  },
+  {
+    "skill": "Analytical Skills",
+    "count": 113
   },
   {
     "skill": "Data Analysis",
-    "count": 121
+    "count": 106
   },
   {
     "skill": "Docker",
-    "count": 102
+    "count": 90
   },
   {
     "skill": "Kubernetes",
-    "count": 98
-  },
-  {
-    "skill": "Git",
-    "count": 96
-  },
-  {
-    "skill": "Azure",
-    "count": 91
+    "count": 88
   },
   {
     "skill": "CI/CD",
-    "count": 91
-  },
-  {
-    "skill": "Leadership",
     "count": 81
   },
   {
+    "skill": "Git",
+    "count": 80
+  },
+  {
+    "skill": "Azure",
+    "count": 79
+  },
+  {
+    "skill": "Leadership",
+    "count": 75
+  },
+  {
     "skill": "Machine Learning",
-    "count": 77
+    "count": 71
   }
 ]
