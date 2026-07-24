@@ -24,6 +24,7 @@ const DESCRIPTION =
   "What the job market is actually asking for, extracted from 1,000 real job postings.";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://joblens-pearl.vercel.app"),
   title: "JobLens",
   description: DESCRIPTION,
   openGraph: {
